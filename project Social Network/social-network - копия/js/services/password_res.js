@@ -1,9 +1,9 @@
-class AuthService {
-    login(email, password) {
+class ResetServise {
+    reset(email) {
         return new Promise((resolve, reject) => {
-            fetch(`${env.apiUrl}/public/auth/login`, {
+            fetch(`${env.apiUrl}/public/auth/reset-password`, {
                 method: "POST",
-                body: JSON.stringify({email, password}),
+                body: JSON.stringify({email}),
                 headers: {
                     "Content-type": "application/json"
                 }
